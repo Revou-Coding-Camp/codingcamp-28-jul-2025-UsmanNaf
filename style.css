@@ -1,0 +1,93 @@
+/* css/style.css */
+:root {
+  --primary: #005ce6;
+  --bg: #f5f7fa;
+  --radius: 6px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--primary);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius);
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background: rgba(255,255,255,.2);
+}
+
+section {
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.banner {
+  background: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
+  color: #fff;
+  padding: 4rem 1rem;
+  text-align: center;
+  border-radius: var(--radius);
+}
+
+.photo-banner {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-top: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input, textarea, button {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #004bb3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
